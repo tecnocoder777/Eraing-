@@ -1,0 +1,7 @@
+{
+  "name": "CoinQuest - Earn & Play",
+  "description": "A gamified earning platform where you complete AI-generated tasks, play mini-games like Trivia and Spin-the-Wheel to earn virtual coins.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
