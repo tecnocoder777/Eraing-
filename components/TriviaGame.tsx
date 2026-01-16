@@ -1,6 +1,7 @@
+
 import React, { useState, useEffect } from 'react';
-import { generateTriviaQuestion } from '../services/geminiService';
-import { TriviaQuestion } from '../types';
+import { generateTriviaQuestion } from '../services/geminiService.ts';
+import { TriviaQuestion } from '../types.ts';
 import { Brain, CheckCircle, XCircle, Loader2, RefreshCw } from 'lucide-react';
 
 interface TriviaGameProps {

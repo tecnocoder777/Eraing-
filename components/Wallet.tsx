@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { UserState } from '../types';
+import { UserState } from '../types.ts';
 import { CreditCard, Wallet as WalletIcon, ArrowRight, Lock } from 'lucide-react';
 
 interface WalletProps {
