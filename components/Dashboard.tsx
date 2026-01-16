@@ -1,7 +1,8 @@
+
 import React from 'react';
-import { UserState } from '../types';
+import { UserState } from '../types.ts';
 import { Coins, Zap, Trophy, TrendingUp } from 'lucide-react';
-import { BannerAd } from './ui/BannerAd';
+import { BannerAd } from './ui/BannerAd.tsx';
 
 interface DashboardProps {
   user: UserState;

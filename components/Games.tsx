@@ -1,8 +1,9 @@
+
 import React, { useState } from 'react';
 import { Gamepad2, Brain, Disc, MousePointerClick, PlayCircle } from 'lucide-react';
-import TriviaGame from './TriviaGame';
-import { AdModal } from './ui/AdModal';
-import { BannerAd } from './ui/BannerAd';
+import TriviaGame from './TriviaGame.tsx';
+import { AdModal } from './ui/AdModal.tsx';
+import { BannerAd } from './ui/BannerAd.tsx';
 
 interface GamesProps {
   onEarn: (amount: number, source: string) => void;

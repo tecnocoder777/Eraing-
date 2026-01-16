@@ -1,7 +1,17 @@
+
 import { GoogleGenAI, Type } from "@google/genai";
 import { TriviaQuestion } from "../types";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
+// Safety check for process.env to prevent crashes on static hosting
+const getApiKey = () => {
+  try {
+    return process?.env?.API_KEY || '';
+  } catch (e) {
+    return '';
+  }
+};
+
+const ai = new GoogleGenAI({ apiKey: getApiKey() });
 const modelId = "gemini-2.5-flash";
 
 export const generateTriviaQuestion = async (difficulty: string = 'medium', topic: string = 'general knowledge'): Promise<TriviaQuestion> => {
@@ -37,7 +47,6 @@ export const generateTriviaQuestion = async (difficulty: string = 'medium', topi
     return JSON.parse(text) as TriviaQuestion;
   } catch (error) {
     console.error("Gemini Trivia Error:", error);
-    // Fallback question in case of API failure or rate limit
     return {
       question: "Which coding library is used for building user interfaces?",
       options: ["Angular", "Vue", "React", "Svelte"],

@@ -1,11 +1,12 @@
+
 import React, { useState, useEffect } from 'react';
-import Layout from './components/Layout';
-import Dashboard from './components/Dashboard';
-import Tasks from './components/Tasks';
-import Games from './components/Games';
-import Wallet from './components/Wallet';
-import { Confetti } from './components/ui/Confetti';
-import { UserState, Task, Transaction } from './types';
+import Layout from './components/Layout.tsx';
+import Dashboard from './components/Dashboard.tsx';
+import Tasks from './components/Tasks.tsx';
+import Games from './components/Games.tsx';
+import Wallet from './components/Wallet.tsx';
+import { Confetti } from './components/ui/Confetti.tsx';
+import { UserState, Task, Transaction } from './types.ts';
 
 // Mock Initial Data
 const INITIAL_TASKS: Task[] = [

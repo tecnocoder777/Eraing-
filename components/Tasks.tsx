@@ -1,9 +1,10 @@
+
 import React, { useState } from 'react';
-import { Task } from '../types';
+import { Task } from '../types.ts';
 import { CheckCircle, Play, PenTool, Loader2, Coins } from 'lucide-react';
-import { generateCreativeTask, gradeCreativeSubmission } from '../services/geminiService';
-import { AdModal } from './ui/AdModal';
-import { BannerAd } from './ui/BannerAd';
+import { generateCreativeTask, gradeCreativeSubmission } from '../services/geminiService.ts';
+import { AdModal } from './ui/AdModal.tsx';
+import { BannerAd } from './ui/BannerAd.tsx';
 
 interface TasksProps {
   tasks: Task[];
@@ -174,12 +175,6 @@ const Tasks: React.FC<TasksProps> = ({ tasks, onCompleteTask }) => {
             )}
           </div>
         ))}
-        
-        {tasks.every(t => t.completed) && (
-            <div className="text-center py-12 text-slate-500">
-                <p>All tasks completed! Check back later.</p>
-            </div>
-        )}
       </div>
     </div>
   );
